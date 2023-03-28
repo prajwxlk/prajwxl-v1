@@ -105,10 +105,23 @@ export default function Home({ posts }) {
                   <div className="mt-2 flex w-full justify-start md:w-fit md:justify-end">
                     <Link
                       href={project.href}
-                      className="whitespace-nowrap text-sm text-primary-900 hover:text-primary-600 dark:text-primary-100 dark:hover:text-primary-200"
+                      className="flex flex-row gap-1 whitespace-nowrap text-sm text-primary-900 hover:text-primary-600 dark:text-primary-100 dark:hover:text-primary-200"
                       aria-label={`Explore "${project.title}"`}
                     >
-                      🔗{' '}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="h-4 w-4 sm:h-5 sm:w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                        />
+                      </svg>{' '}
                       {project.href.length > 20 ? project.href.slice(0, 30) + '...' : project.href}{' '}
                       &rarr;
                     </Link>
