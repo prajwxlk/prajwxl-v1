@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 import NewsletterForm from '@/components/NewsletterForm'
+import BlogPostCard from '@/components/BlogPostCard'
 
 const MAX_DISPLAY = 5
 
@@ -58,47 +59,32 @@ export default function Home({ posts }) {
           </section>
 
           <section>
-            <div className="container mx-auto mb-8 flex flex-col">
-              <h1 className="title-font text-left text-xl font-bold tracking-tighter  sm:text-3xl">
-                <span role="img" aria-label="notebook">
-                  ✒️
-                </span>{' '}
-                Recent Posts
-              </h1>
-              {!posts.length && 'No posts found.'}
-              {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-                const { slug, date, title } = frontMatter
-                return (
-                  <div key={slug} className="py-2">
-                    <article>
-                      <div className="xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                        <div className="xl:col-span-3">
-                          <div>
-                            <div className="flex flex-row">
-                              <h2 className="ml-2 content-center text-lg font-semibold sm:text-xl">
-                                •{' '}
-                                <Link
-                                  href={`/blog/${slug}`}
-                                  className="text-gray-800 hover:underline hover:decoration-sky-500 hover:underline-offset-2 dark:text-gray-100"
-                                >
-                                  {title}
-                                </Link>
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                )
-              })}
-              <Link
-                href="/blog"
-                className="text-lg text-gray-800 hover:underline hover:decoration-sky-500 hover:decoration-wavy dark:text-gray-100"
-                aria-label="all notes"
-              >
-                All Posts &rarr;
-              </Link>
+            <div className="divide-y divide-gray-200 dark:divide-gray-700">
+              <div className="space-y-2 pt-6 pb-4 md:space-y-5">
+                <h3 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-black dark:text-white md:text-3xl">
+                  <span role="img" aria-label="notebook">
+                    ✒️
+                  </span>{' '}
+                  Recent Posts
+                </h3>
+              </div>
+
+              <div className="mb-6">
+                {!posts.length && 'No posts found.'}
+                {posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
+                  const { slug, title, date } = frontMatter
+
+                  return (
+                    <BlogPostCard
+                      key={slug}
+                      date={date}
+                      index={index + 1}
+                      title={title}
+                      slug={slug}
+                    />
+                  )
+                })}
+              </div>
             </div>
           </section>
 
