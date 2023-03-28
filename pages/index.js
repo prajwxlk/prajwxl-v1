@@ -22,15 +22,28 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <section>
+            <div className="flex flex-col-reverse">
+              <div className="flex flex-col pr-8">
+                <h1 className="mb-1 text-3xl font-bold tracking-tight text-zinc-800 dark:text-white md:text-5xl">
+                  Prajwxl
+                </h1>
+                <h2 className="mb-1 text-xl font-bold tracking-tight text-zinc-600 dark:text-white md:text-2xl">
+                  Shipping AI Products
+                </h2>
+              </div>
+              <div className="relative mb-8 mr-auto w-[100px] sm:mb-0 sm:w-[200px]">
+                <Image
+                  src="/static/images/avatar.png"
+                  alt="avatar"
+                  width="200px"
+                  height="200px"
+                  className="rounded-full"
+                />
+              </div>
+            </div>
             <div className="container mx-auto flex flex-col items-center">
               <div className="flex w-full flex-col items-start text-left">
-                <h1 className="title-font mt-8 mb-8 text-left text-5xl font-bold tracking-tighter">
-                  <span role="img" aria-label="Waving Hand">
-                    👋
-                  </span>{' '}
-                  Hi!
-                </h1>
-                <p className="mb-2 text-left font-serif text-base leading-relaxed text-gray-700 dark:text-gray-100 sm:text-lg">
+                <p className="my-2 text-left font-serif text-base leading-relaxed text-gray-700 dark:text-gray-100 sm:text-lg">
                   I am Prajwal, currently working on getting better at coding and startups.
                   I&apos;ve been building projects and doing various side hustles for couple of
                   years now and have had good success at some and failed at the rest. Learning more
