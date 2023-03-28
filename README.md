@@ -3,8 +3,8 @@
 ## Inspiration
 
 - [raphaelchelly.com](https://www.raphaelchelly.com/)
-- [astrosaurus.me] (https://astrosaurus.me/)
-- [bpiggin.com] (https://www.bpiggin.com/)
+- [astrosaurus.me](https://astrosaurus.me/)
+- [bpiggin.com](https://www.bpiggin.com/)
 
 ## Licence
 
