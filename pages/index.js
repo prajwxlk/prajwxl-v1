@@ -61,16 +61,13 @@ export default function Home({ posts }) {
 
           <section>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
-              <div className="space-y-2 pt-6 pb-4 md:space-y-5">
-                <h3 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-black dark:text-white md:text-3xl">
-                  <span role="img" aria-label="notebook">
-                    ✒️
-                  </span>{' '}
+              <div className="space-y-2 pb-4 md:space-y-5">
+                <h3 className="title-font pb-2 text-left text-xl font-bold tracking-tighter sm:text-3xl">
                   Recent Posts
                 </h3>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-12">
                 {!posts.length && 'No posts found.'}
                 {posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
                   const { slug, title, date } = frontMatter
@@ -90,11 +87,8 @@ export default function Home({ posts }) {
           </section>
 
           <section>
-            <div className="container mx-auto mb-8 flex flex-col">
-              <h1 className="title-font pb-2 text-left text-xl font-bold tracking-tighter  sm:text-3xl">
-                <span role="img" aria-label="tools">
-                  ⚙️
-                </span>{' '}
+            <div className="container mx-auto mb-4 flex flex-col">
+              <h1 className="title-font pb-2 text-left text-xl font-bold tracking-tighter sm:text-3xl">
                 Projects and Builds
               </h1>
               {projectsData.map((project) => (
@@ -125,8 +119,10 @@ export default function Home({ posts }) {
           </section>
 
           <section>
-            <div className="content mt-12 sm:mt-24">
-              <h2 className="mb-2 text-xl font-bold text-zinc-800 dark:text-white">Experiences</h2>
+            <div className="content mt-8 sm:mt-12">
+              <h2 className="title-font text-left text-xl font-bold tracking-tighter sm:text-3xl">
+                Experiences
+              </h2>
               <ul className="mt-8">
                 <li className="dark:text-zinc-350 my-5 flex items-center gap-4 text-zinc-500">
                   <a
