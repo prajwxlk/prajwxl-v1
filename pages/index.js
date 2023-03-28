@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 import NewsletterForm from '@/components/NewsletterForm'
 import BlogPostCard from '@/components/BlogPostCard'
+import projectsData from '@/data/projectsData'
 
 const MAX_DISPLAY = 5
 
@@ -96,13 +97,30 @@ export default function Home({ posts }) {
                 </span>{' '}
                 Projects and Builds
               </h1>
-              <Link
-                href="/projects"
-                className="text-lg text-gray-800 hover:underline hover:decoration-sky-500 hover:decoration-wavy dark:text-gray-100"
-                aria-label="all notes"
-              >
-                All Projects &rarr;
-              </Link>
+              {projectsData.map((project) => (
+                <div
+                  key={project.title}
+                  className="flex w-full flex-col items-center border-b py-1 md:flex-row"
+                >
+                  <div className="w-full">
+                    <p className="font-semibold">{project.title}</p>
+                    <p className="text-sm text-primary-600 dark:text-primary-400">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="mt-2 flex w-full justify-start md:w-fit md:justify-end">
+                    <Link
+                      href={project.href}
+                      className="whitespace-nowrap text-sm text-primary-900 hover:text-primary-600 dark:text-primary-100 dark:hover:text-primary-200"
+                      aria-label={`Explore "${project.title}"`}
+                    >
+                      🔗{' '}
+                      {project.href.length > 20 ? project.href.slice(0, 30) + '...' : project.href}{' '}
+                      &rarr;
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 
