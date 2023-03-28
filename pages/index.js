@@ -25,7 +25,7 @@ export default function Home({ posts }) {
           <section>
             <div className="flex flex-col-reverse">
               <div className="flex flex-col pr-8">
-                <h1 className="mb-1 text-3xl font-bold tracking-tight text-zinc-800 dark:text-white md:text-5xl">
+                <h1 className="mb-1 text-3xl font-bold tracking-tight text-zinc-800 dark:text-white md:text-4xl">
                   Prajwxl
                 </h1>
                 <h2 className="mb-1 text-xl font-bold tracking-tight text-zinc-600 dark:text-white md:text-2xl">
