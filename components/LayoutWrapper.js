@@ -5,6 +5,7 @@ import Link from './Link'
 import SectionContainer from './SectionContainer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Footer from './Footer'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -47,7 +48,7 @@ const LayoutWrapper = ({ children }) => {
             </div>
           </header>
           <main className="mb-auto">{children}</main>
-          <FooterGradient />
+          <Footer />
         </div>
       </SectionContainer>
     </>
