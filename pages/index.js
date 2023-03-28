@@ -32,7 +32,7 @@ export default function Home({ posts }) {
                   Shipping AI Products
                 </h2>
               </div>
-              <div className="relative mb-8 mr-auto w-[100px] sm:mb-0 sm:w-[200px]">
+              <div className="relative mr-auto w-[100px] sm:mb-0 sm:w-[200px]">
                 <Image
                   src="/static/images/avatar.png"
                   alt="avatar"
