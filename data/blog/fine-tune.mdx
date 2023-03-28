@@ -1,0 +1,15 @@
+---
+title: 'Fine tuning OpenAI Models'
+tags: ['AI']
+date: '2021-07-23'
+draft: false
+summary: 'My views on how we can be benefited by Fine Tuning the current OpenAI Models'
+---
+
+Few days ago, I found out that OpenAI has released a way to fine tune the existing models to our own specific needs. Previously we used to give the API examples so that it could quickly learn from them and then generate similar completions. Though that way would work really well for certain cases, It would generate really terrible completions for the others.
+
+In my case, I really wanted the completions to really resemble the examples I give and with that also to make sure that the emails produced stayed brief and to the point rather than off topic. This was hard to do with the previous ways as stated above where the examples had to be given with the prompts. The problem isn't in giving examples but rather in the number of examples which were limited, and then the additional costs which were to be borne because of tokens required in providing the examples in every request.
+
+Well, now with the ability to fine tune models, we will be able to train them on the specific use cases of ours. For example, for me I can train the models on sets of good cold emails which I can feed it. This way it stays relevant to only creating emails and the ones in the way I want and I can actually get the best out of the models by providing it with lots and lots of good examples of cold emails in my case. This way it not only generates emails which resemble similarly to the examples but also stay brief in terms of emails.
+
+Other benefits follow too!!, since the models would be pre-trained on hundreds of examples, we won't need to provide them examples during the API requests therefore, we only have to provide the API with prompts. This will reduce the number of tokens used in every API request. Though the prices for using these custom models is quite high compared to the regular pricing, it's worth it as we won't be writing too long of prompts and also the results would be more specific to our use cases.
