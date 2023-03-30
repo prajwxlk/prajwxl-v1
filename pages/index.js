@@ -187,12 +187,10 @@ export default function Home({ posts }) {
                       @prajwxl.
                     </a>
                   </Link>{' '}
-                  You can reach out to me on my{' '}
-                  <Link href="mailto:pskadbane964@gmail.com">
-                    <a className="underline decoration-sky-500 decoration-2 underline-offset-2 hover:decoration-sky-700">
-                      email.
-                    </a>
-                  </Link>
+                  You can reach out to me on my email{' '}
+                  <span className="underline decoration-sky-500 decoration-2 underline-offset-2 hover:decoration-sky-700">
+                    pskadbane964[at]gmail[dot]com
+                  </span>
                 </p>
               </div>
             </div>
