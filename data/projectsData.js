@@ -5,7 +5,7 @@ const projectsData = [
     href: 'aretus.app/',
   },
   {
-    title: '📸 Stable Diffusion Image Generator',
+    title: '📸 AI Image Generator',
     description: `LORA Fine Tuned SD Image Generator.`,
     href: 'sd-image-generator.vercel.app/',
   },
