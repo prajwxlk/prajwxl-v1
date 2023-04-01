@@ -35,4 +35,17 @@ For the Herculaneum papyri, the ink is not immediately visible to the naked eye 
 
 ### 1. Scanning
 
-The scrolls are scanned using a particle acclerator taking hundreds t othousdans of X-ray photographs from different rotational angles. The X-ray photos are then combined into a 3D volume using one of the number of tomographic reconstruction. A volume is a 3D picture made up of 3D pixel cubes called voxels. The voxel size tells us the physical size of the cube, and the value stored in the voxel is an estimate of that location's radiodensity. They provide us with a 3D volume (.tif "image stack"). In the directory of .tif files, each file represents a horizontal crossection or "slice" of the object ("scroll" in this case) starting from the bottom of the object and moving upwards.
+The scrolls are scanned using a particle acclerator taking hundreds t othousdans of X-ray photographs from different rotational angles. The X-ray photos are then combined into a 3D volume using one of the number of [tomographic reconstruction](https://en.wikipedia.org/wiki/Tomographic_reconstruction). A volume is a 3D picture made up of 3D pixel cubes called voxels. The voxel size tells us the physical size of the cube, and the value stored in the voxel is an estimate of that location's radiodensity. They provide us with a 3D volume (.tif "image stack"). In the directory of .tif files, each file represents a horizontal crossection or "slice" of the object ("scroll" in this case) starting from the bottom of the object and moving upwards.
+
+> In the case of our full scroll scans, each .tif file is 100MB. For the fragment scans, sizes range from 14MB to 40MB. For the flattened surface volumes, each .tif file can be up to 280MB.
+
+### 2. Segmentation
+
+In this step we will be identify and capturing the 3D shape of each of the rolled papyrus scroll. _Each individual surface in our 3D volume that we are able to identify is called a "segment"._ The process of segmentation is to be applied to both scrolls and fragments.
+
+- Scrolls can be made into one huge segment but that can be hard to distinguish in so we split it up into more mangeable pieces. Also, segmentation of the scrolls is further made more challenging as different layer of the scrols get damaged.
+- Fragments are relatively easier to distinguish as they are fairly flat and have exposed surface, though we still need to look for the hidden layers of papyrus which is attached underneath the hidden layer.
+
+The tool sugested, is called Volume Cartographer which is used to mannually annotate a surfce of one of the slices from the image stack which then is extrapolated by the software along the z-axis to other slices. _The result is a 3D mesh (.obj file) called a "segment" which intersects the volume (i.e the mesh coordinates are also volume coordinates)._
+
+### 3. Surface Volumes
