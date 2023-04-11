@@ -7,7 +7,7 @@ const projectsData = [
   {
     title: '📸 AI Image Generator',
     description: `LORA Fine Tuned SD Image Generator.`,
-    href: 'http://sd-image-generator.vercel.app/',
+    href: 'https://sd-image-generator.vercel.app/',
   },
   {
     title: '🗂️ Notion Database CMS',
