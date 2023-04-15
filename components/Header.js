@@ -2,15 +2,22 @@ import Link from 'next/link'
 import ThemeSwitch from './ThemeSwitch'
 import MobileNav from './MobileNav'
 import headerNavLinks from '@/data/headerNavLinks'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+  const router = useRouter()
+
   return (
     <div className="flex w-full justify-center">
       <header className="fixed z-50 mt-10 flex w-5/6 items-center justify-between rounded-full bg-gray-300 p-2 dark:bg-gray-600 sm:top-0 sm:w-3/5">
         <div>
           <Link href="/">
             <div className="flex items-center justify-between">
-              <div className="mr-3 p-2 hover:rounded-full hover:bg-blue-500 hover:text-white">
+              <div
+                className={`mr-3 p-2 ${
+                  router.pathname === '/' ? 'rounded-full bg-blue-500 text-white' : ''
+                } hover:rounded-full hover:bg-blue-500 hover:text-white`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -25,7 +32,11 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex items-center text-base leading-5">
-          <div className="p-2 px-4 hover:rounded-full hover:bg-blue-500 hover:text-white sm:block">
+          <div
+            className={`p-2 px-4 hover:rounded-full hover:bg-blue-500 hover:text-white sm:block ${
+              router.pathname.includes('/blog') ? 'rounded-full bg-blue-500 text-white' : ''
+            }`}
+          >
             {headerNavLinks.map((link) => (
               <Link
                 key={link.title}
