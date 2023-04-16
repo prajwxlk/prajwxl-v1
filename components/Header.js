@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         <div className="flex items-center text-base leading-5">
           <div
-            className={`p-2 px-4 hover:rounded-full opacity-75 hover:bg-blue-500 hover:text-white sm:block ${
+            className={`p-2 px-4 opacity-75 hover:rounded-full hover:bg-blue-500 hover:text-white sm:block ${
               router.pathname.includes('/blog') ? 'rounded-full bg-blue-500 text-white' : ''
             }`}
           >
