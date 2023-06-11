@@ -52,7 +52,7 @@ export default function Home({ posts }) {
                   about ML & RL right now.
                 </p>
                 <p className="mb-8 text-left font-serif text-base leading-relaxed text-gray-700 dark:text-gray-100 sm:text-lg">
-                  I am eighteen, learning new things, building cool stuff, and occasionally writing
+                  I am nineteen, learning new things, building cool stuff, and occasionally writing
                   about it here.
                 </p>
               </div>
