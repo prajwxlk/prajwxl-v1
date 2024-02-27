@@ -22,7 +22,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <section>
             <div className="flex flex-col-reverse">
               <div className="flex flex-col pr-8">
@@ -37,8 +37,8 @@ export default function Home({ posts }) {
                 <Image
                   src="/static/images/avatar.png"
                   alt="avatar"
-                  width="200px"
-                  height="200px"
+                  width="200"
+                  height="200"
                   className="rounded-full"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function Home({ posts }) {
               </h2>
               <ul className="mt-8">
                 <li className="dark:text-zinc-350 my-5 flex items-center gap-4 text-zinc-500">
-                  <a
+                  <Link
                     className="link focusable font-medium text-zinc-800 dark:text-white"
                     href="https://www.psytech.ai/"
                     rel="noreferrer"
@@ -147,11 +147,11 @@ export default function Home({ posts }) {
                     <Image
                       src="/static/images/psytech_logo.png"
                       alt="Psytech"
-                      width="50px"
-                      height="50px"
+                      width="50"
+                      height="50"
                       className="rounded-md"
                     />
-                  </a>
+                  </Link>
                   <div className="flex min-w-0 flex-col justify-center">
                     <p className="mb-1 flex items-center">
                       <span className="truncate font-semibold text-zinc-700 dark:text-zinc-100">
@@ -183,9 +183,9 @@ export default function Home({ posts }) {
                 <p className="text-blueGray-600 mb-2 text-left font-serif text-base leading-relaxed text-gray-700 dark:text-gray-100 sm:text-lg">
                   I am available on twitter{' '}
                   <Link href="https://twitter.com/prajwxl">
-                    <a className="underline decoration-sky-500 decoration-2 underline-offset-2 hover:decoration-sky-700">
+                    <span className="underline decoration-sky-500 decoration-2 underline-offset-2 hover:decoration-sky-700">
                       @prajwxl.
-                    </a>
+                    </span>
                   </Link>{' '}
                   You can reach out to me on my email{' '}
                   <span className="underline decoration-sky-500 decoration-2 underline-offset-2 hover:decoration-sky-700">
