@@ -1,13 +1,18 @@
 const projectsData = [
   {
-    title: '⚡ Aretus : A Powerful ChatGPT Client',
-    description: `ChatGPT Client for Power Users`,
+    title: '⚡ Aretus : Audio to Text Converter',
+    description: `Converts Audio files to Text quickly`,
     href: 'https://aretus.app/',
+  },
+  {
+    title: '⚡ A Powerful ChatGPT Client',
+    description: `ChatGPT Client for Power Users`,
+    href: 'https://power-chat-gpt-v1.vercel.app/',
   },
   {
     title: '📸 AI Image Generator',
     description: `LORA Fine Tuned SD Image Generator.`,
-    href: 'https://sd-image-generator.vercel.app/',
+    href: 'https://ai-product-image-generator.vercel.app/',
   },
   {
     title: '🗂️ Notion Database CMS',
