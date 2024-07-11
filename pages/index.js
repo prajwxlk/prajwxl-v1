@@ -1,15 +1,12 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
-import NewsletterForm from '@/components/NewsletterForm'
 import BlogPostCard from '@/components/BlogPostCard'
 import projectsData from '@/data/projectsData'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 100
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
