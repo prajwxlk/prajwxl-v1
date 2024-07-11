@@ -1,8 +1,18 @@
 const projectsData = [
   {
-    title: '⚡ Aretus : Audio to Text Converter',
+    title: '⌨️ Coding Tutor AI',
+    description: `Learn to Code using Hints & Explanations`,
+    href: 'https://www.codingtutorai.com/',
+  },
+  {
+    title: '✨ Aretus : Audio to Text Converter',
     description: `Converts Audio files to Text quickly`,
     href: 'https://aretus.app/',
+  },
+  {
+    title: '⚙️ Image2CodeAI : Image to Code Converter',
+    description: `Converts Images to Code using AI`,
+    href: 'https://image2codeai.com/',
   },
   {
     title: '⚡ A Powerful ChatGPT Client',
